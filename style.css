@@ -1,0 +1,239 @@
+/* =====================
+   RESET
+===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =====================
+   BASE
+===================== */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #07162a;
+  color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* =====================
+   HERO
+===================== */
+.hero {
+  min-height: 100svh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 20px 80px;
+  background-image: url("img/academia.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 0;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.15) 0%,
+    rgba(0, 0, 0, 0.6) 75%
+  );
+  z-index: 1;
+}
+
+/* =====================
+   HERO CONTAINER
+===================== */
+.hero-container {
+  width: 100%;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 32px;
+  text-align: center;
+  position: relative;
+  z-index: 3;
+}
+
+.hero-text {
+  max-width: 600px;
+}
+
+.hero-text h1 {
+  font-size: 2.1rem;
+  margin-bottom: 12px;
+  line-height: 0.9;
+}
+
+.hero-text h1 span {
+  color: #5be6ff;
+}
+
+/* BENEFITS */
+.benefits {
+  margin: 30px auto 18px;
+  display: inline-block;
+  text-align: left;
+}
+
+.benefits li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #e6f7ff;
+  display: flex;
+  align-items: center;
+}
+
+.benefits li::before {
+  content: "+";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #5be6ff;
+  font-weight: 800;
+}
+
+/* PROOF */
+.proof {
+  margin-top: 14px;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  color: #9fe9ff;
+  opacity: 0.9;
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+/* =====================
+   BOTÃO
+===================== */
+.btn {
+  background: #5be6ff;
+  color: #001018;
+  padding: 16px 28px;
+  border-radius: 999px;
+  font-weight: 800;
+  display: inline-block;
+  transition: 0.3s;
+  text-transform: uppercase;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(91, 230, 255, 0.5);
+}
+
+/* =====================
+   RESULTADOS
+===================== */
+.titulo-resultados {
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.titulo-resultados .azul {
+  color: #5be6ff;
+}
+
+.frase-impacto {
+  font-size: 1.05rem;
+  max-width: 700px;
+  margin: 0 auto 8px;
+  opacity: 0.7;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.lista-diferencial {
+  list-style: none;
+  text-align: center;
+  margin: 0 auto 30px;
+}
+
+.lista-diferencial li {
+  color: #00eaff;
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.lista-diferencial li::before {
+  content: "-";
+  margin-right: 8px;
+  opacity: 0.6;
+}
+
+/* =====================
+   BEFORE AFTER SLIDER (UNIFICADO)
+===================== */
+.before-after-slider {
+  margin-top: 50px;
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 10px;
+  padding-left: 20px;
+}
+
+.before-after-slider img {
+  flex: 0 0 75%;
+  max-width: 75%;
+  border-radius: 20px;
+  scroll-snap-align: center;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+  aspect-ratio: 5/6;
+  object-fit: cover;
+}
+
+/* =====================
+   PLANOS
+===================== */
+.plans {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+}
+
+.plan {
+  background: #0b2a4a;
+  padding: 22px 18px;
+  border-radius: 20px;
+  border: 2px solid transparent;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  transition: all 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.plan:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.45);
+}
